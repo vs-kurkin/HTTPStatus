@@ -1,7 +1,7 @@
 {
     "name": "HTTPStatus",
     "author": "Vladislav Kurkin <b-vladi@cs-console.ru>",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "main": "HTTPStatus.js",
     "license": "MIT",
     "engines": {
