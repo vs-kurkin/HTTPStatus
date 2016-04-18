@@ -17,7 +17,7 @@ The most comprehensive list of used http-codes.
  HTTPStatus[404]; //> 'Not found'
  
  // or a method using
- HTTPStatus.getStatusText(HTTP.NOT_FOUND) //> 'Not found'
+ HTTPStatus.getStatusText(HTTPStatus.NOT_FOUND) //> 'Not found'
  
  // or
  HTTPStatus.getStatusText(404) //> 'Not found'
