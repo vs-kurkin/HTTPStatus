@@ -27,6 +27,9 @@
  * HTTPStatus[404]; //> 'Not found'
  * // or
  * HTTPStatus[HTTPStatus.NOT_FOUND];'
+ *
+ * // or
+ * HTTPStatus.getStatusText(HTTPStatus.NOT_FOUND);
  */
 module.exports = {
     /*
@@ -929,6 +932,23 @@ module.exports = {
     523: 'Proxy Declined Request (CloudFlare)',
     524: 'A timeout occurred (CloudFlare)',
     598: 'Network read timeout error (Unknown)',
-    599: 'Network connect timeout error (Unknown)'
-};
+    599: 'Network connect timeout error (Unknown)',
 
+    /**
+     * Returns a text of the status code.
+     * @param {String|Number} code Status code.
+     * @returns {String} Text of the status code.
+     * @throws {Error} Throws error if a status code is not a number or does not exist.
+     */
+    getStatusText: function (code) {
+        if (isNaN(code)) {
+            throw new Error('Status code is not a function: ' + code);
+        }
+
+        if (!this.hasOwnProperty(code)) {
+            throw new Error('Status code does not exist: ' + code);
+        }
+
+        return this[code];
+    }
+};
